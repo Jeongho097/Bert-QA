@@ -29,4 +29,8 @@
 - 1번의 최종 모델의 하이퍼 파라미터를 이용해 학습을 진행함 
   - 이 모델에서는 최종 모델의 배치사이즈를 사용하면 GPU 메모리에 문제가 발생함
   - 따라서 이 모델에서는 Accumulation을 적용하여 1번의 배치사이즈와 유사하게 진행함 
+Gradient accumulation 의 동작원리 (참고 : https://velog.io/@twinjuy/OOM%EB%A5%BC-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0-%EC%9C%84%ED%95%9C-Batch-Accumulation)
+![image](https://user-images.githubusercontent.com/89580953/159453437-183b3e29-309f-4e5f-8c3c-c0a3ddbf065c.png)
+
+
  ![image](https://user-images.githubusercontent.com/89580953/159452718-8dd937cc-2b57-4c02-b41a-64c5c6d4b53b.png)
