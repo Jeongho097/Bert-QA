@@ -36,4 +36,5 @@ Gradient accumulation의 동작원리 (참고 : [Gradient accumulation](https://
 ![image](https://user-images.githubusercontent.com/89580953/159453437-183b3e29-309f-4e5f-8c3c-c0a3ddbf065c.png)
 
 코드 구현 
+
 ![image](https://user-images.githubusercontent.com/89580953/159452718-8dd937cc-2b57-4c02-b41a-64c5c6d4b53b.png)
