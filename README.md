@@ -35,6 +35,5 @@
 Gradient accumulation의 동작원리 (참고 : [Gradient accumulation](https://velog.io/@twinjuy/OOM%EB%A5%BC-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0-%EC%9C%84%ED%95%9C-Batch-Accumulation, "Gradient accumulation link"))
 ![image](https://user-images.githubusercontent.com/89580953/159453437-183b3e29-309f-4e5f-8c3c-c0a3ddbf065c.png)
 
-코드 구현 
-
+- 코드 구현 예시
 ![image](https://user-images.githubusercontent.com/89580953/159452718-8dd937cc-2b57-4c02-b41a-64c5c6d4b53b.png)
