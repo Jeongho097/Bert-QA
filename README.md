@@ -22,4 +22,11 @@
 - 추가적으로 klue/bert-base는 다른 사전 학습 모델과 비교하여 더 다양한 분야의 데이터를 사용했기 때문에 향후 다른 태스크에서도 높은 성능을 보일 것으로 기대됨
 
 # 2. 개인프로젝트
-- 1번의 코드를 
+- 1번의 코드를 함수화하여 간편하게 사용할 수 있도록 만든 모델입니다
+- 사용 데이터 : korquad 데이터 셋
+  - !wget https://korquad.github.io/dataset/KorQuAD_v1.0_train.json -O KorQuAD_v1.0_train.json
+  - !wget https://korquad.github.io/dataset/KorQuAD_v1.0_dev.json -O KorQuAD_v1.0_dev.json
+- 1번의 최종 모델의 하이퍼 파라미터를 이용해 학습을 진행함 
+  - 이 모델에서는 최종 모델의 배치사이즈를 사용하면 GPU 메모리에 문제가 발생함
+  - 따라서 이 모델에서는 Accumulation을 적용하여 1번의 배치사이즈와 유사하게 진행함 
+![image](https://user-images.githubusercontent.com/89580953/159452021-6b228add-1130-4b52-a24c-0c7c82a160f0.png)
