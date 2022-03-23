@@ -9,7 +9,7 @@
 - colab, pytorch, transformers 사용
 
 # 1. AI기술 자연어 처리 과정 2기 (구름) - 기계독해 Question Answering
- - AI기술 자연어 처리 과정 2기 (구름)에서 진행한 BERT를 이용한 한국어 기계 독해 모델입니다.
+ - AI기술 자연어 처리 과정 2기 (구름)에서 진행한 BERT를 이용한 한국어 기계 독해 팀 프로젝트입니다
  - 사용 데이터 : 교육기관에서 한국어 기계 독해 데이터 셋 12,037 개, 기계 독해 데이터 셋(AI Hub)
    - https://www.kaggle.com/c/k-digital-goorm-2-korean-mrc/data (제공된 데이터 셋)
    - https://aihub.or.kr/aidata/86 (AI Hub 기계 독해 데이터 셋)
