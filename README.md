@@ -19,6 +19,7 @@
 
 ![image](https://user-images.githubusercontent.com/89580953/159446598-45c48177-30b5-4a2c-a1ce-74d65a7437a9.png)
 
+
 - 최종 결과물은 Edit Score를 최대한 낮추기 위해 토크나이저의 토큰들을 제거하고 길이가 20이상인 데이터들은 빈칸으로 바꾸는 후처리 과정을 거침
   - 
 - 위의 표의 결과로 인해 가장 높은 성능을 보인 klue/bert-base를 최종 사전 학습 모델을 사용함
