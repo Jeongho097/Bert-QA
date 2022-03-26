@@ -10,10 +10,10 @@
 
 # 1. AI기술 자연어 처리 과정 2기 (구름) - 기계독해 Question Answering
  - AI기술 자연어 처리 과정 2기 (구름)에서 진행한 BERT를 이용한 한국어 기계 독해 팀 프로젝트입니다
- - 사용 데이터 : AI Hub의 기계 독해 데이터 셋 , 교육기관에서 제공한 한국어 기계 독해 데이터 셋
+ - 사용 데이터 : AI Hub의 도서자료 기계 독해 데이터 셋 , 교육기관에서 제공한 한국어 기계 독해 데이터 셋
    - https://www.kaggle.com/c/k-digital-goorm-2-korean-mrc/data (제공된 데이터 셋)
    - https://aihub.or.kr/aidata/86 (AI Hub 기계 독해 데이터 셋)
-   - 제공된 데이터의 개수가 적어 추가적으로 데이터의 형식이 뉴스 형식으로 비슷해 AI Hub의 기계 독해 데이터셋을 가져와 학습을 진행함
+   - 제공된 데이터의 개수가 적어 추가적으로 AI Hub의 도서자료 기계 독해 데이터셋을 가져와 학습을 진행함
  - 사전 학습 모델: 'beomi/kcbert-bert', 'kykim/bert-kor-base', 'klue/bert-base'
    - 추가적으로 Eletra Model('monologg/koelectra-base-v3-discriminator') / Roberta Model('klue/roberta-base')을 사용해 테스트를 진행함
 
@@ -23,6 +23,7 @@
 - 최종 결과물은 Edit Score를 최대한 낮추기 위해 후처리 과정을 거침
   - 토크나이저의 토큰들을 제거하고 길이가 20이상인 데이터들은 빈칸으로 변경
 - 위의 표의 결과로 인해 가장 높은 성능을 보인 klue/bert-base를 최종 사전 학습 모델을 사용함
+   - 참고 : klue/bert-base의 F1 Score는 0.808 을 기록함
 - klue/bert-base는 다른 사전 학습 모델과 비교하여 더 다양한 분야의 데이터를 사용했기 때문에 향후 다른 태스크에서도 높은 성능을 보일 것으로 기대됨
 
 # 2. 개인프로젝트
@@ -34,7 +35,7 @@
   - 이 모델에서는 최종 모델의 배치사이즈를 사용하면 GPU 메모리에 문제가 발생함
   - 따라서 이 모델에서는 Accumulation을 적용하여 1번의 배치사이즈와 유사하게 진행하고 후처리 또한 똑같이 진행함
   - 최종 점수 Edit Score : 0.964 / F1 Score : 0.813 을 기록함
-  - 데이터에 따른 성능 차이가 있을 가능성이 있지만 korquad의 데이터를 이용하는 경우 더 높은 성능을  
+  - 데이터에 따른 성능 차이가 있을 가능성이 있지만 korquad의 데이터를 이용하는 경우 더 높은 성능을 보임
 
 Gradient accumulation의 동작원리 (참고 : [Gradient accumulation](https://velog.io/@twinjuy/OOM%EB%A5%BC-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0-%EC%9C%84%ED%95%9C-Batch-Accumulation))
 ![image](https://user-images.githubusercontent.com/89580953/159453437-183b3e29-309f-4e5f-8c3c-c0a3ddbf065c.png)
