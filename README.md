@@ -34,12 +34,8 @@
 - 1번의 최종 모델의 하이퍼 파라미터를 이용해 학습을 진행함 
   - 이 모델에서는 최종 모델의 배치사이즈를 사용하면 GPU 메모리에 문제가 발생함
   - 따라서 이 모델에서는 Accumulation을 적용하여 1번의 배치사이즈와 유사하게 진행하고 후처리 또한 똑같이 진행함
-  - 최종 점수 Edit Score : 0.964 / F1 Score : 0.813 을 기록함
+  - 최종 점수 Edit Distance : 0.964 / F1 Score : 0.813 을 기록함
   - 데이터에 따른 성능 차이가 있을 가능성이 있지만 korquad의 데이터를 이용하는 경우 더 높은 성능을 보임
 
 Gradient accumulation의 동작원리 (참고 : [Gradient accumulation](https://velog.io/@twinjuy/OOM%EB%A5%BC-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0-%EC%9C%84%ED%95%9C-Batch-Accumulation))
 ![image](https://user-images.githubusercontent.com/89580953/159453437-183b3e29-309f-4e5f-8c3c-c0a3ddbf065c.png)
-
-- 코드 구현 예시
-
-![image](https://user-images.githubusercontent.com/89580953/159452718-8dd937cc-2b57-4c02-b41a-64c5c6d4b53b.png)
